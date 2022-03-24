@@ -19,3 +19,9 @@ def main_menu():
         print("Welcome to the Dice Roller!\nPlease select a menu option.")
         menu_selection()
         menu_choice = input()
+        try:
+            int(menu_choice)
+            break
+        except ValueError:
+            print("Invalid input. Please enter a numerical option.")
+            continue
